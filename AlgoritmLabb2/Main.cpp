@@ -16,7 +16,7 @@ int main()
 	quicksortsuper(&listarand.front(), &listarand.back());
 	std::cout << std::endl << "funktionen ska ha körts" << std::endl;
 	system("PAUSE");
-
+	/*
 	std::vector <int> listarand2 = gen.random(3);
 	quicksortsuper(&listarand2.front(), &listarand2.back());
 	std::cout << std::endl << "funktionen ska ha körts" << std::endl;
@@ -31,5 +31,5 @@ int main()
 	quicksortsuper(&listarand4.front(), &listarand4.back());
 	std::cout << std::endl << "funktionen ska ha körts" << std::endl;
 	system("PAUSE");
-
+	*/
 }

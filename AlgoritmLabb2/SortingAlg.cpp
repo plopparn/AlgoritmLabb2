@@ -57,42 +57,44 @@ void quicksortsuper(int* front, int* back)
      */       
         while (left <= right)
         {
+            std::cout << "inside while " << std::endl;
             if (*left >= *piviot)
             {
                 //std::cout << "inne i först if " << std::endl;
                 while (left != right && *right >= *piviot)
                 {
                     right--;
+                    std::cout << "inside right " << std::endl;
+
                 }
-                std::swap(right, left);
+                std::swap(*right, *left);
             }
             left++;
         }
-        std::swap(right, piviot);
+        std::swap(*right, *piviot);
 
-      /*
+      
         for (int* write = front; write != back+1; write++)
         {
             std::cout << *write << " ";
         }
         std::cout << std::endl << std::endl;
-        */
+        
 
 
         //std::cout << "into the matrix" << std::endl;
         if (right != front)
         {
-            //quicksortsuper(front, right-1);
-            //quicksortsuper(right + 1, back);
+            quicksortsuper(front, right-1);
+            quicksortsuper(right + 1, back);
         }
         //tror felet är att den fortsätter kalla vid 2 element om och om igen. Blir aldirg endast 1.
-
 
         for (int* write = front; write != back + 1; write++)
         {
             std::cout << *write << " ";
         }
         //std::cout << std::endl << *right << std::endl;
-        std::cout << std::endl;
+        std::cout << std::endl << *right << " " << *front << std::endl;
     }
 }
